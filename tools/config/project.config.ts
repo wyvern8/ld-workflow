@@ -1,6 +1,7 @@
 import { join } from 'path';
 
 import { SeedConfig } from './seed.config';
+import {ExtendPackages} from "./seed.config.interfaces";
 // import { ExtendPackages } from './seed.config.interfaces';
 
 /**
@@ -50,6 +51,35 @@ export class ProjectConfig extends SeedConfig {
     // }];
     //
     // this.addPackagesBundles(additionalPackages);
+    // Add packages (e.g. angular2-jwt)
+    let additionalPackages: ExtendPackages[] = [
+      {
+        name: 'launchdarkly-angular',
+        // Path to the package's bundle
+        path: 'node_modules/launchdarkly-angular/launchdarkly-angular.umd.js',
+        packageMeta: {
+          defaultExtension: 'js'
+        }
+      },
+      {
+        name: 'ldclient-js',
+        // Path to the package's bundle
+        path: 'node_modules/ldclient-js',
+        packageMeta: {
+          defaultExtension: 'js'
+        }
+      },
+      {
+        name: 'angular2-logger',
+        // Path to the package's bundle
+        path: 'node_modules/angular2-logger',
+        packageMeta: {
+          defaultExtension: 'js'
+        }
+      }
+    ];
+
+    this.addPackagesBundles(additionalPackages);
 
     /* Add proxy middleware */
     // this.PROXY_MIDDLEWARE = [

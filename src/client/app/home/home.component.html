@@ -1,6 +1,6 @@
-<p>Howdy! Here's a list of awesome computer scientists. Do you know any others? Add to the list yourself.</p>
+<p>Howdy! Here's a list of awesome computer scientists. <span *ngIf="show">Do you know any others? Add to the list yourself.</span></p>
 
-<form (submit)="addName()">
+<form *ngIf="show" (submit)="addName()">
   <input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">
   <button type="submit">Add</button>
 </form>

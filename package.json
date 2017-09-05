@@ -150,6 +150,9 @@
     "intl": "^1.2.5",
     "rxjs": "^5.2.0",
     "systemjs": "0.20.12",
-    "zone.js": "^0.8.7"
+    "zone.js": "^0.8.7",
+    "launchdarkly-angular": "0.1.0",
+    "angular2-logger": "^0.6.0",
+    "ldclient-js": "^1.1.12"
   }
 }
