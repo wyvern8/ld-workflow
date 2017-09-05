@@ -13,7 +13,7 @@ import { LaunchDarklyModule, LaunchDarklyService, LaunchDarklyConfig, LD_CONFIG 
 
 let logger = new Logger();
 logger.level = Level.DEBUG ;
-let ldConfig: LaunchDarklyConfig = {apiKey: '599a6f6ded01b30b18e19233', logger: logger, options: {bootstrap: 'localStorage'}};
+let ldConfig: LaunchDarklyConfig = {apiKey: 'xxx', logger: logger, options: {bootstrap: 'localStorage'}};
 
 @NgModule({
   imports: [BrowserModule, HttpModule, LaunchDarklyModule, AppRoutingModule, AboutModule, HomeModule, SharedModule.forRoot()],
