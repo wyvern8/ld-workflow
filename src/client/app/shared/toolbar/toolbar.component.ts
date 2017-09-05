@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {LaunchDarklyService} from "launchdarkly-angular";
+import { LaunchDarklyService } from 'launchdarkly-angular';
 
 /**
  * This class represents the toolbar component.
@@ -20,10 +20,10 @@ export class ToolbarComponent {
       this.theme = ld.flags[this._flagName];
       this._subscription = ld.flagChange.subscribe((flags: any) => {
         if (flags[this._flagName] !== undefined) {
-          console.log('setting brand: ' + flags[this._flagName])
+          console.log('setting brand: ' + flags[this._flagName]);
           this.theme = flags[this._flagName];
         }
-      })
+      });
     }
   }
 }

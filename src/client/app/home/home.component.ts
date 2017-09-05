@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
       if (flags[this._flagName] !== undefined) {
         this.show = flags[this._flagName];
       }
-    })
+    });
   }
 
   /**
